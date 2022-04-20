@@ -1,3 +1,13 @@
 package com.todolistnoviewmodelnodatabase
 
-data class Todo(val name : String = "")
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+
+class Todo(
+   val name : String,
+    initialChecked: Boolean = false
+) {
+    var checked by mutableStateOf(initialChecked)
+}
+
