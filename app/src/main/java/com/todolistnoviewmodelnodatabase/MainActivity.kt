@@ -104,6 +104,11 @@ class TodoViewModel : ViewModel() {
         _todos.remove(todo)
     }
 
+    fun removeByIndex(index: Int)
+    {
+        _todos.removeAt(index)
+    }
+
     fun onCheckedChanged(todo: Todo, checked: Boolean)
     {
         _todos.find { it.name == todo.name }?.let { todo ->
